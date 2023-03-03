@@ -1,0 +1,54 @@
+.hero-content {
+    padding-top: 60px;
+}
+
+.hero-title {
+    font-size: 2.5rem !important;
+}
+
+.hero-title span {
+    color: #df2020;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    line-height: 30px;
+    color: #777;
+}
+
+.hero-btns button {
+    padding: 10px;
+    width: 150px;
+    border: 1px solid;
+    text-transform: uppercase;
+}
+
+.hero-btns .btn-order {
+    background-color: #df2020;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero-btns .btn-order:hover {
+    background-color: #212245;
+    color: #fff;
+}
+
+.hero-btns .btn-see-all-foods {
+    color: #df2020;
+    border: 1px solid #df2020;
+}
+
+.hero-btns .btn-see-all-foods:hover {
+    border: 1px solid #df2020;
+}
+
+.hero-btns .btn-see-all-foods a {
+    font-weight: 600;
+    color: #df2020;
+}
+
+/* .hero-btns .btn-see-all-foods:hover a {
+    color: #fff;
+} */

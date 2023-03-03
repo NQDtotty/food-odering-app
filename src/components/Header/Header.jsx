@@ -30,9 +30,9 @@ export default function Header() {
         <header className='header'>
             <Container>
                 <div className='nav-wrapper d-flex align-items-center justify-content-between'>
-                    <div className='logo'>
+                    <div className='header-logo'>
                         <img src={logo} alt="logo" />
-                        <h5>Tasty Food</h5>
+                        <h5>Pizza365</h5>
                     </div>
 
                     {/* Menu */}

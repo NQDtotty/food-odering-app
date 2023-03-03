@@ -5,12 +5,10 @@ import Routes from "../../routes/Routers"
 
 export default function Layout() {
     return (
-        <div>
+        <>
             <Header></Header>
-            <div>
-                <Routes></Routes>
-            </div>
+            <Routes></Routes>
             <Footer></Footer>
-        </div>
+        </>
     )
 }

@@ -1,0 +1,96 @@
+footer {
+    padding: 50px 0 30px;
+    background-color: #fde4e4;
+}
+
+.footer-logo img {
+    width: calc(100% - 60%);
+    margin-bottom: 5px;
+
+}
+
+.footer-logo h5 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 28px;
+    font-style: italic;
+}
+
+.footer-title {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #212245;
+    font-weight: 600;
+}
+
+.delivery-time-item,
+.contact-item {
+    background-color: transparent !important;
+}
+
+.delivery-time-item span,
+.contact-item span {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #212245;
+}
+
+.delivery-time-item p,
+.contact-item p {
+    color: #212245;
+}
+
+.newsletter {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsletter input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.newsletter span {
+    background-color: #df2020;
+    padding: 7px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter span i {
+    color: #fff;
+}
+
+.copyright-text {
+    font-size: 1rem;
+    color: #df2020;
+    text-align: center;
+}
+
+.social-links span i {
+    background-color: #df2020;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 992px) {
+    .footer-logo h5 {
+        font-size: 1rem;
+    }
+
+    .footer-title {
+        font-size: 1rem;
+    }
+}
