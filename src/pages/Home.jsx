@@ -4,6 +4,7 @@ import { Col, Container, Row } from 'reactstrap'
 import heroImg from '../assets/images/hero.png'
 import '../styles/hero-section.css'
 import { Link } from 'react-router-dom';
+import Category from '../components/UI/Category';
 
 export default function Home() {
     return (
@@ -34,6 +35,11 @@ export default function Home() {
                         </Col>
                     </Row>
                 </Container>
+            </section>
+
+            {/* Category */}
+            <section className='pt-0'>
+                <Category></Category>
             </section>
         </Helmet>
     )

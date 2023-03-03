@@ -13,7 +13,7 @@ export default function Footer() {
                         <div className='footer-logo'>
                             <img src={logo} alt="logo" />
                             <h5>Pizza365</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
                         </div>
                     </Col>
                     <Col lg="3" md="4" sm="6" className='pt-4'>
@@ -33,13 +33,13 @@ export default function Footer() {
                         <h5 className='footer-title'>Contact</h5>
                         <ListGroup className='contact-list'>
                             <ListGroupItem className='contact-item border-0 ps-0'>
-                                <p>Location: Man Thien, Thu Duc city, Ho Chi Minh city</p>
+                                <p>Location: Man Thien, Thu Duc city, Ho Chi Minh city, Viet Nam</p>
                             </ListGroupItem>
                             <ListGroupItem className='contact-item border-0 ps-0'>
-                                <p>Phone: 0907872000</p>
+                                <p>Phone: <a href='tel:0123456789'>0123456789</a></p>
                             </ListGroupItem>
                             <ListGroupItem className='contact-item border-0 ps-0'>
-                                <p>Email: abc@gmail.com</p>
+                                <p>Email: <a href='mailto:example@gmail.com'>example@gmail.com</a></p>
                             </ListGroupItem>
                         </ListGroup>
                     </Col>
@@ -56,7 +56,7 @@ export default function Footer() {
                 </Row>
                 <Row className='mt-5'>
                     <Col lg="6" md="6" sm="12">
-                        <p className='copyright-text'>&copy;Copyright - 2022, website made by Nguyen Thoai. All Rights Reserved.</p>
+                        <p className='copyright-text'>&copy;Copyright - 2022, website made by Nguyen Thoai. All Rights Reserved</p>
                     </Col>
                     <Col lg="6" md="6" sm="12">
                         <div className='social-links d-flex align-items-center gap-4 justify-content-center'>

@@ -26,8 +26,8 @@ h6 {
 
 a,
 .link {
-  text-decoration: none;
-  color: unset;
+  text-decoration: none !important;
+  color: unset !important;
 }
 
 h1,
