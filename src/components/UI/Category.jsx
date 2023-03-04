@@ -1,6 +1,6 @@
-import React from 'react'
-import { Container, Row, Col } from 'reactstrap'
-import '../../styles/category.css'
+import React from 'react';
+import { Container, Row, Col } from 'reactstrap';
+import '../../styles/category.css';
 
 import categoryImg01 from "../../assets/images/category-01.png";
 import categoryImg02 from "../../assets/images/category-02.png";
@@ -24,14 +24,14 @@ const categoryData = [
         display: 'Row Meat',
         imgUrl: categoryImg04
     }
-]
+];
 
 export default function Category() {
     return (
         <Container>
             <Row>
                 {categoryData.map((item, index) => (
-                    <Col lg='3' md='4' sm='6' key={index}>
+                    <Col lg='3' md='4' sm='6' key={index} className="p-2">
                         <div className='category-item d-flex align-items-center gap-3 justify-content-start'>
                             <div className='category-img'>
                                 <img src={item.imgUrl} alt="category-item" />

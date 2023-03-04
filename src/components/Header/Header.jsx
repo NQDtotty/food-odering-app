@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
-import { Container } from 'reactstrap'
-import logo from '../../assets/images/res-logo.png'
-import { NavLink, Link } from 'react-router-dom'
-import '../../styles/header.css'
+import React, { useRef } from 'react';
+import { Container } from 'reactstrap';
+import logo from '../../assets/images/res-logo.png';
+import { NavLink, Link } from 'react-router-dom';
+import '../../styles/header.css';
 
 const nav_links = [
     {
@@ -21,7 +21,7 @@ const nav_links = [
         display: 'Contact',
         path: '/contact'
     },
-]
+];
 
 export default function Header() {
     const menuRef = useRef(null);

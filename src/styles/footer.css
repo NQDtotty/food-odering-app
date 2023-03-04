@@ -3,10 +3,13 @@ footer {
     background-color: #fde4e4;
 }
 
+.footer-logo {
+    text-align: center;
+}
+
 .footer-logo img {
     width: calc(100% - 60%);
     margin-bottom: 5px;
-
 }
 
 .footer-logo h5 {
@@ -20,6 +23,7 @@ footer {
     color: #333;
     line-height: 28px;
     font-style: italic;
+    text-align: left !important;
 }
 
 .footer-title {

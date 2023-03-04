@@ -1,0 +1,20 @@
+.service-subtitle {
+    color: #df2020;
+}
+
+.service-title span {
+    color: #df2020;
+}
+
+.service-text {
+    color: #777;
+}
+
+.servie-img {
+    width: 20%;
+}
+
+.service-desc {
+    color: #777;
+    padding: 0 30px;
+}

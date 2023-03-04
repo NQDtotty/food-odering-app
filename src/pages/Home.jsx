@@ -1,10 +1,33 @@
-import React from 'react'
+import React from 'react';
 import Helmet from '../components/Helmet/Helmet';
-import { Col, Container, Row } from 'reactstrap'
-import heroImg from '../assets/images/hero.png'
-import '../styles/hero-section.css'
+import { Col, Container, Row } from 'reactstrap';
+import heroImg from '../assets/images/hero.png';
+import '../styles/hero-section.css';
+import '../styles/home.css';
 import { Link } from 'react-router-dom';
 import Category from '../components/UI/Category';
+
+import serviceImg01 from '../assets/images/service-01.png'
+import serviceImg02 from '../assets/images/service-02.png'
+import serviceImg03 from '../assets/images/service-03.png'
+
+const serviceData = [
+    {
+        title: "Quick Delivery",
+        imgUrl: serviceImg01,
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, sit"
+    },
+    {
+        title: "Super Dine In",
+        imgUrl: serviceImg02,
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, sit"
+    },
+    {
+        title: "Easy Pick Up",
+        imgUrl: serviceImg03,
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, sit"
+    }
+];
 
 export default function Home() {
     return (
@@ -40,6 +63,30 @@ export default function Home() {
             {/* Category */}
             <section className='pt-0'>
                 <Category></Category>
+            </section>
+
+            {/* What we serve */}
+            <section>
+                <Container>
+                    <Row>
+                        <Col lg="12" className='text-center'>
+                            <h5 className='service-subtitle mb-4'>What we serve</h5>
+                            <h2 className='service-title'>Just sit back at home</h2>
+                            <h2 className='service-title'>we will <span>take care</span></h2>
+                            <p className='mb-1 mt-4 service-text'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, rem!</p>
+                            <p className='service-text'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, rem!</p>
+                        </Col>
+                    </Row>
+                    <Row className='mt-5'>
+                        {serviceData.map((item, index) => (
+                            <Col lg="4" md="4" sm="12" key={index} className='text-center pt-4'>
+                                <img src={item.imgUrl} alt="service-img" className='servie-img mb-2' />
+                                <h5 className='mb-3'>{item.title}</h5>
+                                <p className='service-desc'>{item.desc}</p>
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
             </section>
         </Helmet>
     )

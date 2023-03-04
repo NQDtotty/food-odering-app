@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Col, Container, Row, ListGroupItem, ListGroup } from 'reactstrap'
-import logo from '../../assets/images/res-logo.png'
-import '../../styles/footer.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Col, Container, Row, ListGroupItem, ListGroup } from 'reactstrap';
+import logo from '../../assets/images/res-logo.png';
+import '../../styles/footer.css';
 
 export default function Footer() {
     return (
@@ -13,7 +13,7 @@ export default function Footer() {
                         <div className='footer-logo'>
                             <img src={logo} alt="logo" />
                             <h5>Pizza365</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum rerum ipsum quis tenetur corrupti, consequuntur quidem</p>
                         </div>
                     </Col>
                     <Col lg="3" md="4" sm="6" className='pt-4'>
@@ -56,7 +56,7 @@ export default function Footer() {
                 </Row>
                 <Row className='mt-5'>
                     <Col lg="6" md="6" sm="12">
-                        <p className='copyright-text'>&copy;Copyright - 2022, website made by Nguyen Thoai. All Rights Reserved</p>
+                        <p className='copyright-text'>&copy;Copyright - 2022, website made by Nguyễn Anh Thoại. All Rights Reserved</p>
                     </Col>
                     <Col lg="6" md="6" sm="12">
                         <div className='social-links d-flex align-items-center gap-4 justify-content-center'>
