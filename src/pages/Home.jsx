@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Helmet from '../components/Helmet/Helmet';
 import { Col, Container, Row } from 'reactstrap';
 import heroImg from '../assets/images/hero.png';
 import '../styles/hero-section.css';
 import '../styles/home.css';
 import { Link } from 'react-router-dom';
-import Category from '../components/UI/Category';
+import Category from '../components/UI/Category/Category';
 
-import serviceImg01 from '../assets/images/service-01.png'
-import serviceImg02 from '../assets/images/service-02.png'
-import serviceImg03 from '../assets/images/service-03.png'
+import serviceImg01 from '../assets/images/service-01.png';
+import serviceImg02 from '../assets/images/service-02.png';
+import serviceImg03 from '../assets/images/service-03.png';
+
+import burgerCategoryImg from '../assets/images/hamburger.png';
+import pizzaCategoryImg from '../assets/images/pizza.png';
+import breadCategoryImg from '../assets/images/bread.png';
+
+import products from '../assets/data/products';
+import ProductCart from '../components/UI/ProductCart/ProductCart';
 
 const serviceData = [
     {
@@ -30,6 +37,27 @@ const serviceData = [
 ];
 
 export default function Home() {
+    const [category, setCategory] = useState("All");
+    const [allProducts, setAllProducts] = useState(products);
+
+    useEffect(() => {
+        if (category === 'ALL') {
+            setAllProducts(products);
+        }
+        else if (category === 'BURGER') {
+            const filteredProducts = products.filter(item => item.category === 'Burger');
+            setAllProducts(filteredProducts);
+        }
+        else if (category === 'PIZZA') {
+            const filteredProducts = products.filter(item => item.category === 'Pizza');
+            setAllProducts(filteredProducts);
+        }
+        else if (category === 'BREAD') {
+            const filteredProducts = products.filter(item => item.category === 'Bread');
+            setAllProducts(filteredProducts);
+        }
+    }, [category]);
+
     return (
         <Helmet title="Home">
             <section>
@@ -83,6 +111,43 @@ export default function Home() {
                                 <img src={item.imgUrl} alt="service-img" className='servie-img mb-2' />
                                 <h5 className='mb-3'>{item.title}</h5>
                                 <p className='service-desc'>{item.desc}</p>
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
+            </section>
+
+            {/* Popular Foods */}
+            <section>
+                <Container>
+                    <Row>
+                        <Col lg='12' className='text-center'>
+                            <h2>Popular Foods</h2>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col lg="12">
+                            <div className='food-category-btn d-flex align-items-center justify-content-center'>
+                                <button onClick={() => setCategory('ALL')} className={`btn d-flex align-items-center justify-content-center gap-1 ${category === 'ALL' ? 'active-category-btn' : ''} `}>All</button>
+                                <button onClick={() => setCategory('BURGER')} className={`btn d-flex align-items-center justify-content-center gap-1 ${category === 'BURGER' ? 'active-category-btn' : ''} `}>
+                                    <img src={burgerCategoryImg} alt="burger-category-img" />
+                                    Burger
+                                </button>
+                                <button onClick={() => setCategory('PIZZA')} className={`btn d-flex align-items-center justify-content-center gap-1 ${category === 'PIZZA' ? 'active-category-btn' : ''} `}>
+                                    <img src={pizzaCategoryImg} alt="pizza-category-img" />
+                                    Pizza
+                                </button>
+                                <button onClick={() => setCategory('BREAD')} className={`btn d-flex align-items-center justify-content-center gap-1 ${category === 'BREAD' ? 'active-category-btn' : ''} `}>
+                                    <img src={breadCategoryImg} alt="bread-category-img" />
+                                    Bread
+                                </button>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        {allProducts.map(item => (
+                            <Col lg='3' md='4' sm='6' key={item.id}>
+                                <ProductCart item={item}></ProductCart>
                             </Col>
                         ))}
                     </Row>

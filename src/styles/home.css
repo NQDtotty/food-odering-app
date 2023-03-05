@@ -18,3 +18,32 @@
     color: #777;
     padding: 0 30px;
 }
+
+.food-category-btn {
+    background-color: #df2020;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+.food-category-btn button {
+    color: #fff;
+    font-weight: 600;
+    margin: 0 8px;
+    outline: none;
+    border: none;
+}
+
+.food-category-btn button:hover {
+    color: #fff;
+}
+
+.food-category-btn img {
+    width: 20%;
+}
+
+.active-category-btn {
+    color: #df2020 !important;
+    background-color: #fff !important;
+    border-radius: 5px;
+}
