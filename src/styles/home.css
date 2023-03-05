@@ -47,3 +47,29 @@
     background-color: #fff !important;
     border-radius: 5px;
 }
+
+.tasty-img img {
+    width: 100%;
+}
+
+.tasty-title span {
+    color: #df2020;
+}
+
+.tasty-desc {
+    color: #777;
+}
+
+.tasty-content h6 {
+    display: flex;
+    align-items: center;
+}
+
+.tasty-content h6 i {
+    color: #df2020;
+    margin: 0 5px;
+}
+
+.tasty-content p {
+    color: #777;
+}

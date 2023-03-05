@@ -18,6 +18,8 @@ import breadCategoryImg from '../assets/images/bread.png';
 import products from '../assets/data/products';
 import ProductCart from '../components/UI/ProductCart/ProductCart';
 
+import tastyImg from '../assets/images/location.png';
+
 const serviceData = [
     {
         title: "Quick Delivery",
@@ -117,7 +119,7 @@ export default function Home() {
                 </Container>
             </section>
 
-            {/* Popular Foods */}
+            {/* Popular foods */}
             <section>
                 <Container>
                     <Row>
@@ -144,12 +146,55 @@ export default function Home() {
                             </div>
                         </Col>
                     </Row>
+                    {/* List of popular foods, filter */}
                     <Row>
                         {allProducts.map(item => (
                             <Col lg='3' md='4' sm='6' key={item.id}>
                                 <ProductCart item={item}></ProductCart>
                             </Col>
                         ))}
+                    </Row>
+                </Container>
+            </section>
+
+            {/* Why tasty treat page */}
+            <section>
+                <Container>
+                    <Row>
+                        <Col lg='6' md='6' sm='12'>
+                            <div className='tasty-img'>
+                                <img src={tastyImg} alt="tasty-img" />
+                            </div>
+                        </Col>
+                        <Col lg='6' md='6' sm='12'>
+                            <h2 className='tasty-title mb-4'>
+                                Why <span>Tasty Treat?</span>
+                            </h2>
+                            <p className='tasty-desc mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus. Tempora reprehenderit a corporis velit, laboriosam vitae ullam, repellat illo sequi odio esse iste fugiat dolor, optio incidunt eligendi deleniti!</p>
+                            <div className='tasty-content'>
+                                <div className='mb-5'>
+                                    <h6>
+                                        <i className="ri-checkbox-circle-line"></i>
+                                        Fresh and tasty foods
+                                    </h6>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, voluptatibus.</p>
+                                </div>
+                                <div className='mb-5'>
+                                    <h6>
+                                        <i className="ri-checkbox-circle-line"></i>
+                                        Quality support
+                                    </h6>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, voluptatibus.</p>
+                                </div>
+                                <div className='mb-5'>
+                                    <h6>
+                                        <i className="ri-checkbox-circle-line"></i>
+                                        Order from any location
+                                    </h6>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum.</p>
+                                </div>
+                            </div>
+                        </Col>
                     </Row>
                 </Container>
             </section>
