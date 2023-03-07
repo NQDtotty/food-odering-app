@@ -20,6 +20,10 @@ import ProductCart from '../components/UI/ProductCart/ProductCart';
 
 import tastyImg from '../assets/images/location.png';
 
+import networkImg from '../assets/images/network.png';
+
+import TestimonialSlider from '../components/UI/Slider/TestimonialSlider';
+
 const serviceData = [
     {
         title: "Quick Delivery",
@@ -41,6 +45,12 @@ const serviceData = [
 export default function Home() {
     const [category, setCategory] = useState("All");
     const [allProducts, setAllProducts] = useState(products);
+    const [hotPizza, setHotPizza] = useState([]);
+
+    useEffect(() => {
+        const filteredProducts = products.filter(item => item.category === 'Pizza');
+        setHotPizza(filteredProducts.slice(0, 4));
+    }, []);
 
     useEffect(() => {
         if (category === 'ALL') {
@@ -193,6 +203,43 @@ export default function Home() {
                                     </h6>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, earum.</p>
                                 </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+
+            {/* Hot pizza */}
+            <section className='mt-0'>
+                <Container>
+                    <Row>
+                        <Col lg="12" md="12" sm="12">
+                            <h2 className='text-center'>Hot Pizza</h2>
+                        </Col>
+                    </Row>
+                    <Row>
+                        {hotPizza.map((item, index) => (
+                            <Col lg="3" md="4" sm="6" key={index}>
+                                <ProductCart item={item}></ProductCart>
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
+            </section>
+
+            {/* Testimonial */}
+            <section>
+                <Container>
+                    <Row>
+                        <Col lg="6" md="6" sm="6">
+                            <h5 className='testimonial-subtitle mb-4'>Testimonial</h5>
+                            <h2 className='testimonial-title mb-4'>What our <span>customers</span> are saying</h2>
+                            <p className='testimonial-desc mb-4'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio quasi qui minus quos sit perspiciatis inventore quis provident placeat fugiat!</p>
+                            <TestimonialSlider></TestimonialSlider>
+                        </Col>
+                        <Col lg="6" md="6" sm="6">
+                            <div className='testimonial-img'>
+                                <img src={networkImg} alt="testimonial-img" />
                             </div>
                         </Col>
                     </Row>

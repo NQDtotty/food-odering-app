@@ -73,3 +73,20 @@
 .tasty-content p {
     color: #777;
 }
+
+.testimonial-img img {
+    width: 100%;
+}
+
+.testimonial-subtitle {
+    color: #df2020;
+}
+
+.testimonial-title span {
+    color: #df2020;
+}
+
+.testimonial-desc {
+    color: #777;
+    line-height: 32px;
+}
