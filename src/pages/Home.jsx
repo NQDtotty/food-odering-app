@@ -43,7 +43,7 @@ const serviceData = [
 ];
 
 export default function Home() {
-    const [category, setCategory] = useState("All");
+    const [category, setCategory] = useState("ALL");
     const [allProducts, setAllProducts] = useState(products);
     const [hotPizza, setHotPizza] = useState([]);
 
@@ -231,13 +231,13 @@ export default function Home() {
             <section>
                 <Container>
                     <Row>
-                        <Col lg="6" md="6" sm="6">
+                        <Col lg="6" md="6" sm="12">
                             <h5 className='testimonial-subtitle mb-4'>Testimonial</h5>
                             <h2 className='testimonial-title mb-4'>What our <span>customers</span> are saying</h2>
                             <p className='testimonial-desc mb-4'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio quasi qui minus quos sit perspiciatis inventore quis provident placeat fugiat!</p>
                             <TestimonialSlider></TestimonialSlider>
                         </Col>
-                        <Col lg="6" md="6" sm="6">
+                        <Col lg="6" md="6" sm="12">
                             <div className='testimonial-img'>
                                 <img src={networkImg} alt="testimonial-img" />
                             </div>

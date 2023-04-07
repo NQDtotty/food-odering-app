@@ -49,6 +49,6 @@
     color: #df2020;
 }
 
-/* .hero-btns .btn-see-all-foods:hover a {
-    color: #fff;
-} */
+.hero-btns .btn-see-all-foods:hover a {
+    color: #212245 !important;
+}
